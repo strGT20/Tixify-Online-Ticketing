@@ -9,10 +9,10 @@
 <body>
 <h2>Silakan login terlebih dahulu</h2>
     <form action="login-process.php" method="post">
-        <label for="email">Email</label><br>
+        <label for="email">Email</label>
         <input type="text" id="email" name="email" required><br>
         
-        <label for="password">Password</label><br>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" required><br><br>
         
         <input type="submit" value="Login">

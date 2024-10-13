@@ -10,17 +10,17 @@
 <h2>Belum punya akun?</h2>
 <h3>Daftar disini</h3>
     <form action="register-process.php" method="post">
-        <label for="nama">Nama Lengkap</label><br>
+        <label for="nama">Nama Lengkap</label>
         <input type="text" id="username" name="nama">
 
         <br><br>
 
-        <label for="email">Email</label><br>
+        <label for="email">Email</label>
         <input type="text" id="email" name="email" required>
         
         <br><br>
         
-        <label for="kata_sandi">Kata Sandi</label><br>
+        <label for="kata_sandi">Kata Sandi</label>
         <input type="password" id="kata_sandi" name="kata_sandi" required>
         
         <br><br>
@@ -30,7 +30,7 @@
 
 <h2>Sudah punya akun?</h2>    
     <form action="login.php">
-        <input type="submit" value="Login" class="btn">
+        <input type="submit" value="Login disini" class="btn">
     </form> 
 </body>
 </html>

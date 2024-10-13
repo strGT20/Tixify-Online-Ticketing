@@ -7,20 +7,17 @@ body {
     color: #333;
 }
 
-h1 {
+h1, h2, h3 {
     text-align: center;
     color: #333;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-.container {
+.container, .card-container {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1000px;
     justify-content: center;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -31,7 +28,7 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    width: 1000px;
+    width: 300px; /* Menyesuaikan lebar card */
     padding: 20px;
     text-align: left;
     transition: transform 0.2s;
@@ -63,7 +60,7 @@ h2 {
 }
 
 /* Form Styles */
-form {
+.form-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -73,50 +70,42 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-form label {
+.form-container label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
-form input[type="text"],
-form input[type="date"],
-form input[type="password"] {
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
     width: 100%;
     padding: 8px;
-    margin: 10px 0;
+    margin: 10px ;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    
 }
 
-form input[type="submit"] {
+.form-container input[type="submit"]{
+    width: 100%;
+    padding: 8px;
+    margin: 10px ;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-submit {
     background-color: #007bff;
     color: #fff;
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Button Styles */
-.btn-back {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 20px;
-    background-color: #6c757d;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.2s;
 }
 
-.btn-back:hover {
-    background-color: #5a6268;
+.btn-submit:hover {
+    background-color: #0056b3;
 }
