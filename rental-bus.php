@@ -25,9 +25,9 @@ include('db-connect.php');
             echo "
             <div class='card'>
                 <h2>{$row['no_reg_bus']}</h2>
-                <p>Kelas Bus: {$row['kelas_layanan']}</p>
-                <p>Kapasitas: {$row['kapasitas']} orang</p>
-                <p>Harga Sewa: Rp{$row['harga_sewa']}</p>
+                <p>{$row['kelas_layanan']}</p>
+                <p>Kapasitas : {$row['kapasitas']} orang</p>
+                <p>Harga Sewa : Rp.{$row['harga_sewa']}</p>
                 <a href='rb-process.php?id_rental={$row['id_rental']}&harga_sewa={$row['harga_sewa']}' class='btn'>Sewa Bus</a>
             </div>";
         }

@@ -41,7 +41,7 @@ if(isset($_GET['id_rute']) && isset($_GET['harga_tiket'])) {
 </head>
 <body>
     <h1>Tolong isi data berikut</h1>
-    <form action="" method="POST"> <!-- Form dikirim ke halaman proses ini -->
+    <form action="" method="POST">
         <label for="asal">Asal</label>
         <input type="text" id="asal" name="asal" required><br><br>
 

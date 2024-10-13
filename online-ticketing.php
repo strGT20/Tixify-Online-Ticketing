@@ -13,6 +13,7 @@ include('db-connect.php');
 </head>
 <body>
 <h1>Tiket Bus Tersedia</h1>
+
     <div class="container">
         <?php
         $result = mysqli_query($connect, "

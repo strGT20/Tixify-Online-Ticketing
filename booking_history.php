@@ -26,27 +26,6 @@ $result = mysqli_query($connect, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Riwayat Pemesanan</title>
-    <style>
-        /* Tambahkan styling untuk card */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 8px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .card h3 {
-            margin: 0;
-        }
-        .card p {
-            margin: 8px 0;
-        }
-    </style>
 </head>
 <body>
     <h1>Riwayat Pemesanan</h1>
@@ -55,18 +34,18 @@ $result = mysqli_query($connect, $query);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<div class='card'>";
-                echo "<h3>No Bus: {$row['no_reg_bus']}</h3>";
-                echo "<p>Kelas: {$row['kelas_layanan']}</p>";
-                echo "<p>Biaya: Rp{$row['biaya']}</p>";
+                echo "<h3>No Bus : {$row['no_reg_bus']}</h3>";
+                echo "<p>Kelas : {$row['kelas_layanan']}</p>";
+                echo "<p>Biaya : Rp{$row['biaya']}</p>";
                 
                 if ($row['tipe_bus'] === 'reguler') {
-                    echo "<p>Rute: {$row['asal']} - {$row['tujuan']}</p>";
-                    echo "<p>Berangkat: {$row['berangkat']}</p>";
+                    echo "<p>Rute : {$row['asal']} - {$row['tujuan']}</p>";
+                    echo "<p>Tanggal Keberangkatan :  {$row['berangkat']}</p>";
                 } elseif ($row['tipe_bus'] === 'rental') {
                     echo "<p>Tanggal Mulai: {$row['berangkat']}</p>";
                     echo "<p>Tanggal Selesai: {$row['selesai']}</p>";
-                    echo "<p>Penjemputan: {$row['asal']}</p>";
-                    echo "<p>Tujuan: {$row['tujuan']}</p>";
+                    echo "<p>Penjemputan : {$row['asal']}</p>";
+                    echo "<p>Tujuan : {$row['tujuan']}</p>";
                 }
                 echo "</div>";
             }

@@ -3,32 +3,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1d233a;
+    color: #e4e4e4;
 }
 
-h1, h2, h3 {
+h1 {
     text-align: center;
-    color: #333;
+    color: #f4f4f4;
 }
 
-.container, .card-container {
+h2 {
+    text-align: center;
+    color: #f4f4f4;
+}
+
+h3 {
+    text-align: center;
+    color: #e4e4e4;
+}
+
+
+.container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
     justify-content: center;
-    margin: 0 auto;
     padding: 20px;
 }
 
 /* Card Styles */
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+ .card {
+    background-color: #3b5b8d;
+    border: 1px solid #3b5b8d;
+    border-radius: 14px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    width: 300px; /* Menyesuaikan lebar card */
+    width: 1000px;
     padding: 20px;
     text-align: left;
     transition: transform 0.2s;
@@ -40,14 +49,14 @@ h1, h2, h3 {
 
 .card h3, .card p {
     margin: 10px 0;
-    color: #333;
+    color: #e4e4e4;
 }
 
 .card .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 15px;
-    background-color: #28a745;
+    background-color:#f1a304;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -55,12 +64,30 @@ h1, h2, h3 {
     transition: background-color 0.2s;
 }
 
+.card .btn_bus {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    width: 200px;
+    background-color: #f1a304;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
 .card .btn:hover {
-    background-color: #218838;
+    background-color: #db7200;
+}
+
+.card .btn_bus:hover {
+    background-color: #db7200;
 }
 
 /* Form Styles */
-.form-container {
+form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -70,42 +97,54 @@ h1, h2, h3 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-container label {
+
+form label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
+    color: #000;
 }
 
-.form-container input[type="text"],
-.form-container input[type="email"],
-.form-container input[type="password"] {
+form input[type="text"],
+form input[type="date"],    
+form input[type="password"] {
     width: 100%;
     padding: 8px;
-    margin: 10px ;
+    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    
 }
 
-.form-container input[type="submit"]{
-    width: 100%;
-    padding: 8px;
-    margin: 10px ;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.btn-submit {
-    background-color: #007bff;
+form input[type="submit"] {
+    background-color: #f1a304;
     color: #fff;
-    padding: 10px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-.btn-submit:hover {
-    background-color: #0056b3;
+form input[type="submit"]:hover {
+    background-color: #db7200;
+}
+
+
+
+/* Button Styles */
+.btn-back {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 20px;
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
 }
