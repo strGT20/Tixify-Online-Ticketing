@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $row['password'])) {
             $_SESSION['id_user'] = $row['id_user'];
             $_SESSION['nama'] = $row['nama'];
-             header("Location: main-page.php");
+             header("Location: index.php");
             exit;
         } else {
             echo "Kata sandi salah!";

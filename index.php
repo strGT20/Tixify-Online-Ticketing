@@ -48,7 +48,7 @@
     <br>
     
     <div class="container">
-        <div class="card">
+        <div class="card" onclick="location.href='online-ticketing.php';">
             <img src="images/jetbus_sdd5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Online Ticketing</h5>
@@ -59,7 +59,7 @@
     </div>
     
     <div class="container">
-        <div class="card">
+        <div class="card" onclick="location.href='rental-bus.php';">
             <img src="images/jetbus_mhd5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Online Rent Booking</h5>
@@ -68,14 +68,15 @@
                     <a href="rental-bus.php" class="btn_bus">Sewa Bus</a>
                 </div>
     </div>
+    <br>
     
-        <div class="card" onclick="location.href='online-ticketing.php';">
+        <div class="card" >
             <h2>Online Ticketing</h2>
             <p></p>
             <a href="online-ticketing.php" class="btn_bus">Pesan Tiket</a>
         </div>
 
-        <div class="card" onclick="location.href='rental-bus.php';">
+        <div class="card" ">
             <h2>Online Rent Booking</h2>
             <p></p>
             
