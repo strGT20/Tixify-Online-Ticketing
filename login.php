@@ -17,5 +17,10 @@
         
         <input type="submit" value="Login">
     </form>
+
+<h2>Belum punya akun?</h2>
+<form action="register.php" method="post">
+    <input type="submit" value="Register here">
+</form>    
 </body>
 </html>

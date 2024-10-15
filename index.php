@@ -9,32 +9,30 @@
 </head>
 <body>
 
+<!-- Bagian Navigation Bar -->
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Tixify</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Bootstrap
+    </a>
+  </div>
+</nav>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Armada kami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="booking_history.php">History</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">Login</a>
         </li>
       </ul>
     </div>
@@ -58,7 +56,7 @@
                 </div>
     </div>
     
-    <div class="container">
+    <!-- <div class="container"> -->
         <div class="card" onclick="location.href='rental-bus.php';">
             <img src="images/jetbus_mhd5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -68,26 +66,9 @@
                     <a href="rental-bus.php" class="btn_bus">Sewa Bus</a>
                 </div>
     </div>
-    <br>
-    
-        <div class="card" >
-            <h2>Online Ticketing</h2>
-            <p></p>
-            <a href="online-ticketing.php" class="btn_bus">Pesan Tiket</a>
-        </div>
-
-        <div class="card" ">
-            <h2>Online Rent Booking</h2>
-            <p></p>
-            
-        </div>
     </div>
     
     <br><br>
-    <form action="booking_history.php">
-        <label for="history booking"></label>
-        <input type="submit" value="Riwayat booking" class="btn_3">
-    </form>
     <form action="logout.php" method="POST">
         <input type="submit" value="Logout" class="btn_3">
     </form>
