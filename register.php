@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Belum punya akun?</h2>
-<h3>Daftar disini</h3>
+<div class="form-container">    
+<h4>Belum punya akun?</h4>
+<h5>Daftar disini</h5>
     <form action="register-process.php" method="post">
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="username" name="nama">
@@ -32,12 +33,12 @@
     </form><br><br>
 
 
-<h2>Sudah punya akun?</h2>
+<h4>Sudah punya akun?</h4>
     <div class="container" id="login">
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <a class="btn btn-primary" type="button" id="btn-login" href="login.php">Login</a>
+        <div class="button-container">
+            <a href="login.php" class="btn-auth">Login</a>
         </div>
     </div>
-    
+</div>    
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('db-connect.php');
+include('header.php');
 
 if (!isset($_SESSION['id_user'])) {
     header('Location: login.php');
@@ -31,30 +32,6 @@ $result = mysqli_query($connect, $query);
     <title>Riwayat Pemesanan</title>
 </head>
 <body>
-
-<div class="navbar">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
-  <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-    </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="main_nav">
-    <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Armada kami</a></li>
-        <li class="nav-item"><a class="nav-link" href="booking_history.php">History</a></li>
-    </ul>
-        <a class="btn btn-warning" href="login.php">Login</a>
-  </div> 
-</nav>
-</nav>
-</div> 
-
-<br><br><br><br>
     <h1>Riwayat Pemesanan</h1>
     <div class="container">
         <?php
@@ -83,3 +60,7 @@ $result = mysqli_query($connect, $query);
     </div>
 </body>
 </html>
+
+<?php
+include ('footer.php');
+?>
