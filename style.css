@@ -1,27 +1,35 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat;
     margin: 0;
     padding: 0;
-    background-color: #1d233a;
-    color: #e4e4e4;
+    background-color: #F5F6FA;
+    color: #f4f4f4;
+
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 h1 {
     text-align: center;
-    color: #f4f4f4;
+    color: #031273;
 }
 
 h2 {
     text-align: center;
-    color: #f4f4f4;
+    color: #031273;
 }
 
 h3 {
     text-align: center;
-    color: #e4e4e4;
+    color: #031273;
 }
 
+.navbar-brand{
+    color: #ffffff;
+}
 
 .container {
     display: flex;
@@ -32,8 +40,8 @@ h3 {
 
 /* Card Styles */
  .card {
-    background-color: #3b5b8d;
-    border: 1px solid #3b5b8d;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 14px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 15px;
@@ -47,17 +55,60 @@ h3 {
     transform: translateY(-5px);
 }
 
-.card h3, .card p {
+.card h3, .card h5, .card p {
     margin: 10px 0;
-    color: #e4e4e4;
+    color: #031273;
 }
+
+/* Navbar Container Styling */
+#navbar {
+    background-color: #031273 !important;
+    padding: 20px;
+}
+
+#navbar .nav-link {
+    padding: 10px 15px;
+     /* Sesuaikan jarak pada link */
+}
+/* .navbar .collapse{
+    background-color: #031273; 
+} */
+
+.navbar-expand {
+    background-color: #031273; /* Warna biru yang serasi */
+}
+
+/* Navbar Link Styling */
+.navbar-nav {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.nav-item .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Atur jarak kanan logo */
+    padding: 0; /* Hapus padding jika ada */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+
 
 .card .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 15px;
-    background-color:#f1a304;
-    color: #fff;
+    background-color: #031273;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -69,9 +120,11 @@ h3 {
     padding: 10px 20px;
     margin-top: 15px;
     width: 200px;
-    background-color: #f1a304;
+    background-color: #ffffff;
+    stroke: #031273;
+    stroke-width: 5px;
     text-align: center;
-    color: #fff;
+    color: #031273;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -79,11 +132,13 @@ h3 {
 }
 
 .card .btn:hover {
-    background-color: #db7200;
+    background-color: #031273;
+    color: #ffffff;
 }
 
 .card .btn_bus:hover {
-    background-color: #db7200;
+    background-color: #031273;
+    color: #ffffff;
 }
 
 /* Form Styles */
@@ -117,7 +172,7 @@ form input[type="password"] {
 }
 
 form input[type="submit"] {
-    background-color: #f1a304;
+    background-color: #031273;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -147,4 +202,59 @@ form input[type="submit"]:hover {
 
 .btn-back:hover {
     background-color: #5a6268;
+}
+
+#login_btn{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#register {
+    max-width: 400px;
+    background-color: #ffffff;
+    border: #6c757d;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#btn-register {
+    background-color: #F5F6FA;
+    stroke-width: 5px;
+    stroke: #031273;
+    color: #031273;
+}
+
+#btn-register:hover {
+    background-color: #031273;
+    stroke: #031273;
+    color: #ffffff;
+}
+
+#login {
+    max-width: 400px;
+    background-color: #ffffff;
+    border: #6c757d;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#btn-login {
+    background-color: #F5F6FA;
+    stroke-width: 5px;
+    stroke: #031273;
+    color: #031273;
+}
+
+#btn-login:hover {
+    background-color: #031273;
+    stroke: #031273;
+    color: #ffffff;
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Akun Starluxe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,11 +29,15 @@
         <br><br>
         
         <input type="submit" value="Daftar">
-    </form>
+    </form><br><br>
 
-<h2>Sudah punya akun?</h2>    
-    <form action="login.php">
-        <input type="submit" value="Login disini" class="btn">
-    </form> 
+
+<h2>Sudah punya akun?</h2>
+    <div class="container" id="login">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" type="button" id="btn-login" href="login.php">Login</a>
+        </div>
+    </div>
+    
 </body>
 </html>

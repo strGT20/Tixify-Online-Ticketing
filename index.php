@@ -4,46 +4,38 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Halaman Utama</title>
+    <link rel="icon" href="images/Logo1.svg" type="image/svg+xml">
+    <title>Tixify : Official Site</title>
 </head>
 <body>
 
 <!-- Bagian Navigation Bar -->
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-  <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
+<div class="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
+  <a class="navbar-brand" href="#">
+      <img src="images/Logo1.svg" alt="Bootstrap" width="60" height="30"> Tixify
     </a>
-  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Pelayanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Armada kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking_history.php">Riwayat</a></li>
+    </ul>
+        <a class="btn btn-warning" id="login_btn" href="login.php">Login</a>
+  </div> 
 </nav>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Armada kami</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="booking_history.php">History</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </nav>
-
+</div> 
 
     <!-- <h1>Tixify</h1> -->
-     <br>
+     <br><br><br><br>
     <h2>Booking tiket dan sewa bus Starluxe lebih mudah dengan Tixify!</h2>
-    <br>
     
     <div class="container">
         <div class="card" onclick="location.href='online-ticketing.php';">
@@ -67,10 +59,5 @@
                 </div>
     </div>
     </div>
-    
-    <br><br>
-    <form action="logout.php" method="POST">
-        <input type="submit" value="Logout" class="btn_3">
-    </form>
 </body>
 </html>

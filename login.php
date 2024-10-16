@@ -19,8 +19,10 @@
     </form>
 
 <h2>Belum punya akun?</h2>
-<form action="register.php" method="post">
-    <input type="submit" value="Register here">
-</form>    
+<div class="container" id="register">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-primary" type="button" id="btn-register" href="register.php">Daftar</a>
+    </div>
+    </div>    
 </body>
 </html>
