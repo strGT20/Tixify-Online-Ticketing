@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="form-container">    
 <h4>Belum punya akun?</h4>
 <h5>Daftar disini</h5>
     <form action="register-process.php" method="post">

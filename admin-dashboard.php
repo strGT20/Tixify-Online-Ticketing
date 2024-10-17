@@ -1,5 +1,10 @@
 <?php
-include 'header.php';
+session_start();
+include 'db-connect.php';
+
+// Ambil data bus dari database
+$query = "SELECT * FROM bus";
+$result = mysqli_query($connect, $query);
 ?>
 
 <!DOCTYPE html>
@@ -10,41 +15,32 @@ include 'header.php';
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/Logo1.svg" type="image/svg+xml">
-    <title>Tixify : Official Site</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
 
-    <h3>Pesan tiket dan sewa bus Starluxe lebih mudah dengan Tixify!</h3>    
+    <h1>Daftar Bus</h1>
+    <a href="add-bus.php" class="btn btn-primary mb-4">Tambah Bus Baru</a>
     <div class="container">
-        <div class="card" onclick="location.href='online-ticketing.php';">
-            <img src="images/jetbus_sdd5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Online Ticketing</h5>
-                    <p class="card-text">Pesan tiket bus untuk perjalanan antar kota dengan berbagai pilihan rute dan kelas bus.</p>
-                    <p class="card-text"><small class="text-muted">Lihat daftar tiket selengkapnya</small></p>
-                    <div class="button-container">
-                        <a href="online-ticketing.php" class="btn-bus">Pesan Tiket</a>
+        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+            <div class='card mb-3' style='max-width: 1000px;'>
+            <div class='row g-0'>
+                <div class='col-md-4'>
+                    <img src="<?php echo $row['foto_armada']; ?>" class='img-fluid rounded-start' alt='Bus Image'>
+                </div>
+                <div class='col-md-8'>
+                    <div class='card-body'>
+                    <h5 class="card-title"><?php echo $row['no_reg_bus']; ?></h5>
+                    <a href="detail-bus.php?id=<?php echo $row['id_bus']; ?>" class="btn">Detail</a>
+                    <a href="delete-bus.php?id=<?php echo $row['id_bus']; ?>" class="btn">Hapus</a>
                     </div>
                 </div>
-    </div>
-    
-    <!-- <div class="container"> -->
-        <div class="card" onclick="location.href='rental-bus.php';">
-            <img src="images/jetbus_mhd5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Online Rent Booking</h5>
-                    <p class="card-text">Sewa bus secara online untuk berbagai kebutuhan perjalanan pribadi atau acara khusus.</p>
-                    <p class="card-text"><small class="text-muted">Lihat daftar bus selengkapnya</small></p>
-                    <div class="button-container">
-                        <a href="rental-bus.php" class="btn-bus">Sewa Bus</a>
-                    </div>
-                </div>
-    </div>
-    </div>
+            </div>
+        </div>
+        <?php } ?>
+</div>
 </body>
 </html>
-
-<?php
-include ('footer.php');
-?>
+<?php 
+include ('footer.php'); 
+mysqli_close($connect); ?>

@@ -39,11 +39,11 @@ $result = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<div class='card'>";
                 echo "<h3>No Bus : {$row['no_reg_bus']}</h3>";
-                echo "<p>Kelas : {$row['kelas_layanan']}</p>";
-                echo "<p>Biaya : Rp{$row['biaya']}</p>";
+                echo "<p>Kelas Layanan : {$row['kelas_layanan']}</p>";
+                
                 
                 if ($row['tipe_bus'] === 'reguler') {
-                    echo "<p>Rute : {$row['asal']} - {$row['tujuan']}</p>";
+                    echo "<p>{$row['asal']} - {$row['tujuan']}</p>";
                     echo "<p>Tanggal Keberangkatan :  {$row['berangkat']}</p>";
                 } elseif ($row['tipe_bus'] === 'rental') {
                     echo "<p>Tanggal Mulai: {$row['berangkat']}</p>";
@@ -51,6 +51,7 @@ $result = mysqli_query($connect, $query);
                     echo "<p>Penjemputan : {$row['asal']}</p>";
                     echo "<p>Tujuan : {$row['tujuan']}</p>";
                 }
+                echo "<p>Rp. {$row['biaya']}</p>";
                 echo "</div>";
             }
         } else {

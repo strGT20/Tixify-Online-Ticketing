@@ -33,7 +33,7 @@ include 'header.php';
         <div class="card" onclick="location.href='rental-bus.php';">
             <img src="images/jetbus_mhd5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Online Bus Rental</h5>
+                    <h5 class="card-title">Online Reservation</h5>
                     <p class="card-text">Sewa bus secara online untuk berbagai kebutuhan perjalanan pribadi atau acara khusus.</p>
                     <p class="card-text"><small class="text-muted">Lihat daftar bus selengkapnya</small></p>
                     <div class="button-container">
