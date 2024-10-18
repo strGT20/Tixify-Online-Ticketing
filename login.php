@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['id_user'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +28,12 @@
         
         <input type="submit" value="Login">
     </form>
-
+    <br>
 <h4>Belum punya akun?</h4>
+<br>    
         <div class="container" id="login">
             <div class="button-container">
-                <a href="register.php" class="btn-auth">Login</a>
+                <a href="register.php" class="btn-auth">Register</a>
             </div>
         </div>    
 </body>

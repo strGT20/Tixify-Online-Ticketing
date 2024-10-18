@@ -1,6 +1,11 @@
 <?php
-session_start();
 include 'db-connect.php';
+
+session_start();
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 
 $id_bus = $_GET['id'];
 
@@ -20,26 +25,26 @@ if ($bus['tipe_bus'] == 'reguler') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Update data umum
+    // Update data utama bus 
     $no_reg_bus = $_POST['no_reg_bus'];
     $kelas_layanan = $_POST['kelas_layanan'];
     $kapasitas = $_POST['kapasitas'];
     $tipe_bus = $bus['tipe_bus'];
 
-    // Update tabel bus
+    // Query update tabel bus
     $update_bus = "UPDATE bus SET no_reg_bus = '$no_reg_bus', kelas_layanan = '$kelas_layanan', kapasitas = '$kapasitas' WHERE id_bus = '$id_bus'";
     mysqli_query($connect, $update_bus);
 
-    // Update tabel spesifik berdasarkan tipe bus
+    // Query update tabel spesifik berdasarkan tipe bus
     if ($tipe_bus == 'reguler') {
         $rute = $_POST['rute'];
         $harga_tiket = $_POST['harga_tiket'];
-        $update_reguler = "UPDATE bus_reguler SET rute = '$rute', harga_tiket = '$harga_tiket' WHERE id_bus = '$id_bus'";
-        mysqli_query($connect, $update_reguler);
+        $up_reg = "UPDATE bus_reguler SET rute = '$rute', harga_tiket = '$harga_tiket' WHERE id_bus = '$id_bus'";
+        mysqli_query($connect, $up_reg);
     } else if ($tipe_bus == 'rental') {
         $harga_sewa = $_POST['harga_sewa'];
-        $update_rental = "UPDATE bus_rental SET harga_sewa = '$harga_sewa' WHERE id_bus = '$id_bus'";
-        mysqli_query($connect, $update_rental);
+        $up_rent = "UPDATE bus_rental SET harga_sewa = '$harga_sewa' WHERE id_bus = '$id_bus'";
+        mysqli_query($connect, $up_rent);
     }
 
     header('Location: admin-dashboard.php');

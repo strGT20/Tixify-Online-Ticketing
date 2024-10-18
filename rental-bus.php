@@ -2,6 +2,12 @@
 session_start();
 include('db-connect.php');
 include ('header.php');
+
+session_start();
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

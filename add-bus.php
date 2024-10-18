@@ -1,52 +1,61 @@
 <?php
-session_start();
-include 'db-connect.php';
+session_start(); // Memulai session
+include 'db-connect.php'; // Menghubungkan ke database
 
-// Cek apakah tipe bus sudah dipilih
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Cek apakah tipe bus sudah dipilih dari form
 $tipe_bus = isset($_POST['tipe_bus']) ? $_POST['tipe_bus'] : '';
 
+// Cek jika metode request adalah POST dan tombol 'save' ditekan
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])) {
-    // Bagian untuk insert ke tabel Bus
+    // Ambil data umum bus dari form
     $no_reg_bus = $_POST['no_reg_bus'];
     $kelas_layanan = $_POST['kelas_layanan'];
     $kapasitas = $_POST['kapasitas'];
     
-    // Bagian tambahan berdasarkan tipe bus
-    $rute = $tipe_bus == 'reguler' ? $_POST['rute'] : null;
+    // Ambil data tambahan berdasarkan tipe bus (reguler atau rental)
+    $rute = $tipe_bus == 'reguler' ? $_POST['rute'] : null; //Ternary operator
     $harga_tiket = $tipe_bus == 'reguler' ? $_POST['harga-tiket'] : null;
     $harga_sewa = $tipe_bus == 'rental' ? $_POST['harga-sewa'] : null;
 
-    // Upload gambar
-    $directory = "images/";
-    $foto_armada = $directory . basename($_FILES["image"]["name"]);
-    move_uploaded_file($_FILES["image"]["tmp_name"], $foto_armada);
+    // Bagian untuk meng-upload gambar
+    $directory = "images/"; // Direktori tujuan penyimpanan gambar
+    $foto_armada = $directory . basename($_FILES["image"]["name"]); // Path lengkap dari gambar
+    move_uploaded_file($_FILES["image"]["tmp_name"], $foto_armada); // Memindahkan file yang diupload ke direktori
 
-    // Masukkan data ke tabel bus
+    // Query untuk memasukkan data umum ke tabel `bus`
     $query_bus = "INSERT INTO `bus` (`id_bus`, `no_reg_bus`, `tipe_bus`, `kelas_layanan`, `kapasitas`, `foto_armada`)
                   VALUES (NULL, '$no_reg_bus', '$tipe_bus', '$kelas_layanan', '$kapasitas', '$foto_armada')";
     mysqli_query($connect, $query_bus);
     
-    // Ambil id bus yang baru saja dimasukkan
+    // Mengambil ID dari bus yang baru saja dimasukkan
     $id_bus = mysqli_insert_id($connect);
     
-    // Masukkan ke tabel bus_reguler atau bus_rental sesuai tipe
+    // Cek tipe bus untuk menentukan tabel tambahan yang akan dimasukkan
     if ($tipe_bus == 'reguler') {
+        // Query untuk tipe 'reguler', memasukkan data ke tabel `bus_reguler`
         $query_reguler = "INSERT INTO bus_reguler (id_bus, rute, harga_tiket) 
                           VALUES ('$id_bus', '$rute', '$harga_tiket')";
         mysqli_query($connect, $query_reguler);
     } else if($tipe_bus == 'rental'){
+        // Query untuk tipe 'rental', memasukkan data ke tabel `bus_rental`
         $query_rental = "INSERT INTO bus_rental (id_bus, harga_sewa) 
                          VALUES ('$id_bus', '$harga_sewa')";
         mysqli_query($connect, $query_rental);
     } else {
-        echo "Tipe bus tidak valid";
+        echo "Tipe bus tidak valid"; // Pesan jika tipe bus tidak valid
     }
 
-    // Redirect ke halaman admin-dashboard.php
+    // Redirect ke halaman admin-dashboard.php setelah berhasil menyimpan data
     header("Location: admin-dashboard.php");
     exit();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,10 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])) {
     <title>Tambah Bus</title>
 </head>
 <body>
-<div class="container mt-5">
+<div class="container">
     <h1>Tambah Bus Baru</h1>
     <form action="" method="post" enctype="multipart/form-data">
-        <!-- Dropdown Tipe Bus untuk pilih "reguler" atau "rental" -->
+        <!-- Dropdown Tipe Bus untuk pilih tipe bus -->
         <div class="mb-3">
             <label for="tipe_bus" class="form-label">Tipe Bus</label>
             <select class="form-control" id="tipe_bus" name="tipe_bus" required onchange="this.form.submit()">

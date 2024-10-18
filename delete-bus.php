@@ -1,6 +1,6 @@
 <?php
-session_start();
 include 'db-connect.php';
+
 
 $bus_id = $_GET['id']; // Ambil ID bus dari URL
 

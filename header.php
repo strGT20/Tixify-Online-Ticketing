@@ -23,11 +23,9 @@
   <div class="collapse navbar-collapse" id="main_nav">
     <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Pelayanan</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Armada kami</a></li>
         <li class="nav-item"><a class="nav-link" href="booking_history.php">Riwayat</a></li>
     </ul>
-        <a class="btn btn-warning" id="login_btn" href="login.php">AKUN</a>
+        <a class="btn btn-warning" id="login_btn" href="logout.php">Logout</a>
   </div> 
 </nav>
 </nav>

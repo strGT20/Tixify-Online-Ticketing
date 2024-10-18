@@ -55,7 +55,7 @@ footer{
     padding: 20px;
 }
 
-/* Card Styles */
+/* card */
  .card {
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -72,24 +72,22 @@ footer{
     transform: translateY(-5px);
 }
 
+/* teks dalam card */
 .card h3, .card h5, .card p {
     margin: 10px 0;
     color: #031273;
 }
 
-/* Navbar Container Styling */
+/* container navbar */
 #navbar {
     background-color: #031273 !important;
     padding: 20px;
 }
 
+/* link navbar */
 #navbar .nav-link {
     padding: 10px 15px;
-     /* Sesuaikan jarak pada link */
 }
-/* .navbar .collapse{
-    background-color: #031273; 
-} */
 
 .navbar-expand {
     background-color: #031273; /* Warna biru yang serasi */
@@ -157,6 +155,8 @@ footer{
     color: #ffffff;
 }
 
+
+
 /* Form Styles */
 form {
     max-width: 400px;
@@ -203,9 +203,7 @@ form input[type="submit"]:hover {
 }
 
 
-
 /* Button Styles */
-
 .btn-auth {
     background-color: #ffffff;
     color: #031273;
@@ -223,6 +221,7 @@ form input[type="submit"]:hover {
     background-color: #031273;
     color: #ffffff;
 }
+
 .button-container {
     text-align: right; /* Mengatur konten dalam div ke sebelah kanan */
 }
@@ -244,7 +243,6 @@ form input[type="submit"]:hover {
     background-color: #031273;
     color: #ffffff;
 }
-
 
 .btn-back {
     display: inline-block;
@@ -321,4 +319,34 @@ form input[type="submit"]:hover {
     background-color: #031273;
     stroke: #031273;
     color: #ffffff;
+}
+
+.flexbox {
+    justify-content: center;
+}
+
+.add-container {
+    display:inline ;
+    justify-content: center;
+
+}
+
+#btn-add {
+    background-color: #031273;
+    color: #ffffff;
+    border: 2px solid #031273;
+    margin-left: 590px;
+    padding: 10px 300px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#btn-add:hover {
+    background-color: #ffffff;
+    color: #031273;
 }

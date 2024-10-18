@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 include 'db-connect.php';
 
 // Ambil data bus dari database
@@ -18,9 +22,15 @@ $result = mysqli_query($connect, $query);
     <title>Admin Dashboard</title>
 </head>
 <body>
-
+    <br>
     <h1>Daftar Bus</h1>
-    <a href="add-bus.php" class="btn btn-primary mb-4">Tambah Bus Baru</a>
+<div class="flexbox">
+    <div class="add-container" id="add">
+        <div class="add-button">
+        <a href="add-bus.php" id="btn-add">Tambah Bus Baru</a>
+    </div>        
+</div>    
+    
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <div class='card mb-3' style='max-width: 1000px;'>

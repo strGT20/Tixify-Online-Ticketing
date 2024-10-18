@@ -1,7 +1,12 @@
 <?php
-session_start();
 include('db-connect.php');
 include('header.php');
+
+session_start();
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +41,7 @@ include('header.php');
                         <h5 class='card-title'>Bus No: {$row['no_reg_bus']}</h5>    
                         <p class='card-text'>Rute: {$row['rute']}</p>
                         <p class='card-text'>Kelas Layanan: {$row['kelas_layanan']}</p>
-                        <p class='card-text'>Harga Tiket: Rp{$row['harga_tiket']}</p>
+                        <p class='card-text'>Harga Tiket: Rp. {$row['harga_tiket']}</p>
                         <a href='ot-process.php?id_rute={$row['id_rute']}&harga_tiket={$row['harga_tiket']}' class='btn' >Pesan Tiket</a>
                     </div>
                 </div>

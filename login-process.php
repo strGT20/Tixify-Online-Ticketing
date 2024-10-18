@@ -3,7 +3,7 @@ session_start();
 include 'db-connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
+    $email = $_POST['email'];   
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM Users WHERE email = '$email'";
