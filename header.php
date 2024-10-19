@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- Bagian Navigation Bar -->
 <div class="navbar">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
   <a class="navbar-brand" href="#">
@@ -30,6 +29,6 @@
 </nav>
 </nav>
 </div> 
-     <br><br><br><br>
+     <br><br><br>
 </body>
 </html>

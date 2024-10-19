@@ -21,7 +21,7 @@ if (!isset($_SESSION['id_user'])) {
     <title>Online Ticketing</title>
 </head>
 <body>
-<h1>Tiket Bus Tersedia</h1>
+<h2>Tiket Bus Tersedia</h2>
 
 <div class="container">
     <?php

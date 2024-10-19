@@ -22,6 +22,41 @@ $result = mysqli_query($connect, $query);
     <title>Admin Dashboard</title>
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Logo1.svg" type="image/svg+xml">
+    <title>Tixify : Official Site</title>
+</head>
+<body>
+
+<!-- Navbar khusus admin -->
+<div class="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
+  <a class="navbar-brand" href="#">
+      <img src="images/Logo1.svg" alt="Bootstrap" width="60" height="30"> Tixify
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="admin-dashboard.php">Manajemen armada</a></li>
+    </ul>
+        <a class="btn btn-warning" id="login_btn" href="logout.php">Logout</a>
+  </div> 
+</nav>
+</nav>
+</div> 
+     <br><br><br>
+</body>
+</html>
+
     <br>
     <h1>Daftar Bus</h1>
 <div class="flexbox">

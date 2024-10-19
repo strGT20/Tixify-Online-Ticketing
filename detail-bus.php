@@ -63,6 +63,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Edit Detail Bus</title>
 </head>
 <body>
+
+<!-- Navbar khusus admin -->
+<div class="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
+  <a class="navbar-brand" href="#">
+      <img src="images/Logo1.svg" alt="Bootstrap" width="60" height="30"> Tixify
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="admin-dashboard.php">Manajemen armada</a></li>
+    </ul>
+        <a class="btn btn-warning" id="login_btn" href="logout.php">Logout</a>
+  </div> 
+</nav>
+</nav>
+</div> 
+     <br><br><br>
+</body>
+</html>
+
     <div class="container mt-5">
         <h1>Edit Detail Bus</h1>
         <form action="" method="post">

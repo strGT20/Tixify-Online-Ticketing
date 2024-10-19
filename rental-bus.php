@@ -22,7 +22,7 @@ if (!isset($_SESSION['id_user'])) {
     <title>Sewa Bus</title>
 </head>
 <body>
-    <h1>Sewa Bus</h1>
+    <h2>Sewa Bus</h2>
     <div class="container">
         <?php
         $result = mysqli_query($connect, "
